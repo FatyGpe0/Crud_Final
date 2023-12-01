@@ -4,10 +4,12 @@ const log = require('morgan'); // para saber los clientes conectados
 const bodyParse = require('body-parser');
 const path = require('path');
 
+
 const IndexRoutes = require('./routers/index.js');
 const { default: mongoose } = require('mongoose');
 
 app.set('port', process.env.PORT || 3000); // asignacion de puerto
+app.use(express.static("./public"));
 //app.set('view engine', 'ejs');
 
 
